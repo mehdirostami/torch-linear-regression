@@ -30,10 +30,10 @@ class model(torch.nn.Module):
 	def __init__(self):
 		#inherite arguments from the parent class:
 		super(model, self).__init__()
-		#For linear regression model, use torch.nn.Linear...To see the options run print(dir(torch.nn))
+		#For linear combination of inputs (X*w), use torch.nn.Linear...To see the options run print(dir(torch.nn))
 		self.linear = torch.nn.Linear(p, 1)#here the intercept/bias is used (defualt)
 
-		#The forward pass is for prediction of test data. The forward pass for the training is inside torch.nn.Linear
+		#The forward pass is for prediction of test data. The forward pass for the training is inside the parent class...
 	def forward(self, x):
 		y = self.linear(x)
 		return(y)
